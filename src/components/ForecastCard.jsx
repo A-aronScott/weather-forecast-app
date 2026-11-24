@@ -1,5 +1,9 @@
-function ForecastCard({ forecastDay }) {
+import { convertTemp } from '../utils/convertTemp';
+
+function ForecastCard({ forecastDay, unit }) {
   const { day, high, low, description, icon } = forecastDay;
+  const displayHigh = convertTemp(high, unit);
+  const displayLow = convertTemp(low, unit);
 
   return (
     <div className="forecast-card">
@@ -9,8 +13,8 @@ function ForecastCard({ forecastDay }) {
       </div>
       <p className="forecast-description">{description}</p>
       <p className="forecast-temps">
-        <span className="forecast-high">{high}°C</span>
-        <span className="forecast-low">{low}°C</span>
+        <span className="forecast-high">{displayHigh}°{unit}</span>
+        <span className="forecast-low">{displayLow}°{unit}</span>
       </p>
     </div>
   );

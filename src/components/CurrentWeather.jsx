@@ -1,5 +1,8 @@
-function CurrentWeather({ weather }) {
+import { convertTemp } from '../utils/convertTemp';
+
+function CurrentWeather({ weather, unit }) {
   const { city, temperature, description, icon, humidity, windSpeed } = weather;
+  const displayTemp = convertTemp(temperature, unit);
 
   return (
     <section className="current-weather">
@@ -9,7 +12,7 @@ function CurrentWeather({ weather }) {
         {icon}
       </div>
 
-      <p className="current-weather-temp">{temperature}°C</p>
+      <p className="current-weather-temp">{displayTemp}°{unit}</p>
       <p className="current-weather-description">{description}</p>
 
       <div className="current-weather-details">
