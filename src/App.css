@@ -3,6 +3,14 @@
   gap: 8px;
   justify-content: center;
   padding: 16px 24px 0;
+
+  @media (max-width: 1024px) {
+    padding: 16px 16px 0;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 }
 
 .search-bar input {
@@ -10,6 +18,11 @@
   border: 1px solid var(--border);
   border-radius: 6px;
   font-size: 16px;
+
+  @media (max-width: 600px) {
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 .search-bar button {
@@ -19,6 +32,10 @@
   background: var(--accent-bg);
   color: var(--accent);
   cursor: pointer;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .search-bar button:hover {
@@ -35,6 +52,10 @@
   color: var(--text);
   text-align: center;
   padding: 24px;
+
+  @media (max-width: 600px) {
+    padding: 16px;
+  }
 }
 
 .error-message {
@@ -44,6 +65,11 @@
   border: 1px solid var(--accent-border);
   border-radius: 6px;
   margin: 16px 24px;
+
+  @media (max-width: 600px) {
+    padding: 16px;
+    margin: 16px;
+  }
 }
 
 .unit-toggle {
@@ -51,6 +77,10 @@
   gap: 8px;
   justify-content: center;
   padding: 12px 24px 0;
+
+  @media (max-width: 1024px) {
+    padding: 12px 16px 0;
+  }
 }
 
 .unit-btn {
@@ -74,6 +104,14 @@
   align-items: center;
   gap: 8px;
   padding: 24px;
+
+  @media (max-width: 1024px) {
+    padding: 20px 16px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 16px;
+  }
 }
 
 .current-weather-icon {
@@ -89,6 +127,10 @@
   font-weight: 500;
   color: var(--text-h);
   margin: 0;
+
+  @media (max-width: 600px) {
+    font-size: 36px;
+  }
 }
 
 .current-weather-description {
@@ -99,11 +141,24 @@
   display: flex;
   gap: 16px;
   margin-top: 8px;
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .forecast-list {
   padding: 24px;
   text-align: center;
+
+  @media (max-width: 1024px) {
+    padding: 20px 16px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 16px;
+  }
 }
 
 .forecast-cards {
@@ -111,6 +166,14 @@
   gap: 12px;
   margin-top: 12px;
   justify-content: center;
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 }
 
 .forecast-card {
@@ -121,7 +184,17 @@
   padding: 16px 12px;
   border: 1px solid var(--border);
   border-radius: 8px;
+  box-sizing: border-box;
   flex: 1 1 0;
+
+  @media (max-width: 1024px) {
+    flex: 1 1 calc(33% - 12px);
+    min-width: 0;
+  }
+
+  @media (max-width: 600px) {
+    flex: 1 1 100%;
+  }
 }
 
 .forecast-day {
