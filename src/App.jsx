@@ -1,5 +1,6 @@
 import CurrentWeather from './components/CurrentWeather'
-import { sampleCurrentWeather } from './data/sampleWeather'
+import ForecastList from './components/ForecastList'
+import { sampleCurrentWeather, sampleForecast } from './data/sampleWeather'
 import './App.css'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <h1>Weather Forecast</h1>
       <CurrentWeather weather={sampleCurrentWeather} />
+      <ForecastList forecast={sampleForecast} />
     </>
   )
 }
